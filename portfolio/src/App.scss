@@ -1,0 +1,52 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Serif+Vithkuqi:wght@400;600;700&display=swap');
+
+:root{
+  --black:#000000;
+  --yellow:#FFFF00;
+  --white:#fff;
+  --ibm-plex:'IBM Plex Sans', sans-serif;
+  --monte-serrat:'Montserrat', sans-serif;
+  --nato-serif:'Noto Serif Vithkuqi', serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+  color: var(--white);
+}
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--ibm-plex);
+}
+h1{
+  font-size: 45px;
+}
+h2{
+  font-size:40px;
+}
+h3{
+  font-size: 35px;
+}
+h4{
+  font-size: 30px;
+}
+h5{
+  font-size: 24px;
+}
+h6{
+  font-size: 20px;
+}
+p{
+  color:var(--white);
+  font-size: 18px;
+}
+li{
+  list-style: none;
+}

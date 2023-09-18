@@ -1,0 +1,17 @@
+// Footer
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        padding: 5px 10px;
+        color: #202020;
+        background-color:#fff;
+        margin-right: 15px;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: var(--yellow);
+            scale: 1.3;
+        }
+    }
+}

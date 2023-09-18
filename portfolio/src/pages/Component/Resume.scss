@@ -1,0 +1,248 @@
+.education-header-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .education-header {
+    position: relative;
+    margin-bottom: 50px;
+    display: inline-block;
+
+    h1 {
+      font-size: 35px;
+      font-family: var(--monte-serrat);
+      text-transform: uppercase;
+      width: auto;
+      font-weight: 700;
+      padding-bottom: 5px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 125px;
+        height: 2px;
+        top: 100%;
+        left: 0;
+        box-sizing: border-box;
+      }
+    }
+
+    p {
+      text-align: right;
+      width: auto;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin: 0px;
+      position: absolute;
+      font-weight: 500;
+      font-family: var(--monte-serrat);
+      font-size: 15px;
+      bottom: -4px;
+      right: 0;
+    }
+  }
+}
+
+.education-section {
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #202020;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    z-index: -1;
+  }
+  .education-box {
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+    .education-box-year {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-size: 55px;
+        font-weight: 500;
+        color: #202020;
+        transition: all 1s ease;
+        position: relative;
+        .btech-final-year {
+          position: absolute;
+          font-size: 18px;
+          bottom: -15px;
+          right: 5px;
+        }
+      }
+    }
+    &:hover {
+      .education-box-year {
+        h1 {
+          color: var(--yellow);
+        }
+      }
+    }
+    .education-box-desc {
+      text-align: left;
+      padding-left: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .education-box-info {
+        p {
+          font-family: var(--monte-serrat);
+          margin-bottom: 4px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .education-box-right {
+    position: relative;
+    &::before {
+      content: "";
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      border: 2px solid var(--yellow);
+      position: absolute;
+      top: 45%;
+      left: -20px;
+      background: #a151af;
+    }
+    .education-box-year {
+      h1 {
+        margin-left: 20px;
+      }
+    }
+  }
+  .education-box-left {
+    justify-content: end;
+    position: relative;
+    &::after {
+      content: "";
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      border: 2px solid var(--yellow);
+      position: absolute;
+      top: 45%;
+      right: -19px;
+      background: #a151af;
+    }
+    .education-box-year {
+      h1 {
+        margin-right: 20px;
+      }
+    }
+    .education-box-desc {
+      padding-right: 20px;
+      padding-left: 0;
+      .education-box-info {
+        p {
+          text-align: end;
+        }
+      }
+    }
+  }
+}
+
+// skills
+.skill-header-sec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .skill-header {
+    position: relative;
+    margin-bottom: 50px;
+    display: inline-block;
+
+    h1 {
+      font-size: 35px;
+      font-family: var(--monte-serrat);
+      text-transform: uppercase;
+      width: auto;
+      font-weight: 700;
+      padding-bottom: 5px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 95px;
+        height: 2px;
+        top: 100%;
+        left: 0;
+        box-sizing: border-box;
+      }
+    }
+    p {
+      text-align: right;
+      width: auto;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin: 0px;
+      position: absolute;
+      font-weight: 500;
+      font-family: var(--monte-serrat);
+      font-size: 15px;
+      bottom: -4px;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section {
+    &::after {
+      opacity: 0;
+    }
+    .education-box-right {
+      &::before {
+        display: none;
+      }
+      .education-box-year {
+        h1 {
+          margin-left: 0px;
+        }
+      }
+    }
+    .education-box-left {
+      &::after {
+        display: none;
+      }
+      .education-box-year {
+        h1 {
+          margin-right: 0;
+        }
+      }
+      .education-box-desc {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+@media (max-width:768px){
+  .education-section {
+    &::after {
+      opacity: 0;
+    }
+    .education-box-right {
+      &::before {
+        display: none;
+      }
+    }
+    .education-box-left {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
