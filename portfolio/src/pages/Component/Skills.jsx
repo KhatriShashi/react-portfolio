@@ -66,7 +66,6 @@ export default function Skills() {
 
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 5
         },
@@ -88,29 +87,7 @@ export default function Skills() {
         }
     };
 
-    const [isVisible, setIsVisible] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-          const skillLogos = document.querySelectorAll(".skill-card-logo");
-          skillLogos.forEach((logo) => {
-            const boundingBox = logo.getBoundingClientRect();
-            const threshold = 0.5;
-    
-            if (
-              boundingBox.top <= window.innerHeight * threshold &&
-              boundingBox.bottom >= 0
-            ) {
-              logo.classList.add("animate");
-            }
-          });
-        };
-    
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-      }, []);
-    
+   
     return (
         <>
             <Carousel responsive={responsive} infinite={true} autoPlay={true}
@@ -122,7 +99,7 @@ export default function Skills() {
                     skills.map((skill) => {
                         return (
                             <div key={index}>
-                                <div className={`skill-card-logo ${isVisible ? "animate" : ""}`} style={{"--color":skill.color,"--percentage":skill.percentage}}>
+                                <div className="skill-card-logo" style={{"--color":skill.color,"--percentage":skill.percentage}}>
                                     <div className="skill-card-content">
                                         <div className="skill-card-image">
                                             <img src={skill.src} alt={skill.caption} />
